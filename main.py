@@ -35,8 +35,6 @@ def calificaPalabras(diccionario):
             diccionario_nuevo[i.upper()] = "Notable"
         elif diccionario[i] >= 9 and diccionario[i] <= 10:
             diccionario_nuevo[i.upper()] = "Sobresaliente"
-        else:
-            print("La nota no puede sobrepasar 10")
     return diccionario_nuevo
 
 
@@ -46,8 +44,13 @@ def switch_case():
     print("1. Ejercicio 1")
     print("2. Ejercicio 2")
     print("3. Ejercicio 3")
-    print("4. Salir")
+    print("4. Ejercicio 4")
+    print("5. Ejercicio 5")
+    print("0. Salir")
     opcion = int(input("Ingrese una opcion: "))
+    if opcion == 0:
+        print("Good bye!")
+        return
     if opcion == 1:
         n = int(input("Ingrese un numero: "))
         c = input("Ingrese un caracter: ")
@@ -77,11 +80,5 @@ def switch_case():
     else:
         print("Opcion incorrecta")
         switch_case()
-
-#print(generar_n_caracteres(5, "x"))
-#
-#histograma([4, 9, 2, 7])
-# Ejercicio 3
-#print(funcionLista(lambda x: x ** 3, [1, 2, 3, 4, 5]))
 
 switch_case()
